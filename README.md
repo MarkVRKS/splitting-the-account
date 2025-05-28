@@ -22,17 +22,22 @@
 
 ### Диаграмма архитектуры
 
-````artifact
-id: architecture-diagram
-name: Архитектура сервиса
-type: mermaid
-content: |-
-  graph TD
-    A[Загрузка чека] --> B[OCR-модуль]
-    B --> C[Парсинг результата]
-    C --> D[Логика деления счета]
-    D --> E[Пользовательский интерфейс]
+%% Mermaid diagram
+graph TD
+  A[Загрузка чека] -->|Отправить изображение| B[OCR-модуль]
+  B -->|Текстовый результат| C[Парсинг результата]
+  C -->|Структурированные данные| D[Логика деления счета]
+  D -->|Распределение расходов| E[Пользовательский интерфейс]
+  E -->|Обратная связь| F[Изменение данных]
+  F -->|Обновленные данные| D
 
+  %% Styling
+  classDef default fill:#f96,stroke:#333,stroke-width:2px;
+  classDef start fill:#9f6,stroke:#333,stroke-width:2px;
+  classDef end fill:#69f,stroke:#333,stroke-width:2px;
+
+  class A start;
+  class E end;
 ### Основные модули
 
 1. Модуль загрузки и обработки изображения чека
