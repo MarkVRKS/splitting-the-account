@@ -78,17 +78,6 @@
 - Простота установки и интеграции.
 - Хорошая производительность на типичных чеках.
 
-- #### Пример кода:
-
-```python
-import pytesseract
-from PIL import Image
-
-def extract_text_from_receipt(image_path):
-    image = Image.open(image_path)
-    text = pytesseract.image_to_string(image, lang='eng')
-    return text
-
 Алгоритмы деления счета 
 1. Равномерное деление 
 
