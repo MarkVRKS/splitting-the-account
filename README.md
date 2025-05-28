@@ -22,17 +22,15 @@
 
 ## 🎯 Как это работает
 
+<div align="center">
+  
 ```mermaid
 graph LR
     A[📷 Загрузка чека] --> B[🔍 OCR-обработка]
     B --> C[📊 Парсинг данных]
     C --> D[🧮 Выбор метода]
     D --> E[💸 Готовый результат]
-    style A fill:#e3f9fd,stroke:#0366d6
-    style B fill:#f0fff4,stroke:#28a745
-    style C fill:#fff5f5,stroke:#d73a49
-    style D fill:#fff8e6,stroke:#ffd33d
-    style E fill:#f5f0ff,stroke:#6f42c1
+</div>
  
 ### Основные модули
 
